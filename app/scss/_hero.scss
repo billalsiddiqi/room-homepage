@@ -1,10 +1,19 @@
 .hero {
     position: relative;
     margin-top: -8rem;
+    @include breakpoint-up(xlarge){
+        display: flex;
+    }
     &-sliders {
+        @include breakpoint-up(xlarge) {
+            width: 60%;
+        }
         .single-slide {
             display: none;
             width: 100%;
+            @include breakpoint-up(xlarge) {
+                height: 100%;
+            }
             img {
                 width: 100%;
                 height: auto;
@@ -13,7 +22,11 @@
                 display: none;
                 @include breakpoint-up(medium) {
                     display: block;
-                }                
+                }   
+                @include breakpoint-up(xlarge) {
+                    height: 100%;
+                    object-fit: cover;
+                }              
             }
             
             .m-img {
@@ -30,8 +43,32 @@
         @include breakpoint-up(medium){
             padding: 3.3125rem 8.0625rem;
         }
+        @include breakpoint-up(xlarge) {
+            width: 40%;
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        @include breakpoint-up(xlarge){
+            padding:0 101px;
+        }
         .single-content-slide{
             display: none;
+            h1 {
+                @include breakpoint-up(xlarge){
+                    font-size: 24px;
+                }
+                @include breakpoint-up(xxlarge){
+                    font-size: 43px;
+                }
+            }
+
+            p  {
+                @include breakpoint-up(xxlarge){
+                    font-size: 18px;
+                }
+            }
         }
 
         .shop-now {
@@ -42,6 +79,19 @@
                 margin-top: 57px;
                 display: flex;
                 align-items: center;
+                @include breakpoint-down(xlarge) {
+                    margin-top: 20px;
+                }
+                @include breakpoint-up(xxlarge) {
+                    font-size: 23px;
+                }
+                &:hover {
+                    color: $paragraph;
+                    transition: none;
+                    svg path{
+                        fill: $paragraph;
+                    }
+                }
             }
             span {
                 margin-right: 43px;
@@ -58,8 +108,36 @@
                 @include breakpoint-up(medium){
                     top: -67px;
                 }
+                @include breakpoint-up(xlarge){
+                    right: inherit;
+                    top: inherit;
+                    bottom: 0;
+                    left: 0;
+                    width: 25%;
+                    height: 12%;
+                    background-color: transparent;
+                }
+                @include breakpoint-up(xxlarge){
+                    width: 26%;
+                }
                 .arrow {
                     padding: 1.1875rem 1.4375rem;
+
+                    @include breakpoint-up(xlarge){
+                       padding: 13% 20.5%;    
+                       background-color: $black;   
+                       display: flex;
+                       align-items: center;              
+                    }
+                    @include breakpoint-up(xxlarge){
+                        padding: 16% 21.5%;    
+                        // background-color: $black;                 
+                     }
+                    cursor: pointer;
+                    border: none;
+                    &:hover {
+                        background-color: $very_dark_gray;
+                    }
                 }
     }   }
 }

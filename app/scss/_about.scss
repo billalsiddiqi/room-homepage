@@ -1,10 +1,19 @@
 .about {
+    @include breakpoint-up(xlarge) {
+        display: grid;
+        grid-template-columns: 30% 40% 30%;
+    }
+   
     &-dark {
         width: 100%;
 
         img {
             width: 100%;
             height: auto;
+            @include breakpoint-up(xlarge) {
+                height: 100%;
+                object-fit: cover;
+            }
         }
     }
 
@@ -15,9 +24,27 @@
             padding: 3.3125rem 8.0625rem;
         }
 
-        h3 {
+        @include breakpoint-up(xlarge){
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-left: 48px;
+            margin-right: 48px;
+        }
+
+        h4 {
             text-transform: uppercase;
             letter-spacing: 5px;
+            @include breakpoint-up(xxlarge) {
+                font-size: 24px;
+            }
+        }
+        
+        p  {
+            @include breakpoint-up(xxlarge){
+                font-size: 18px;
+            }
         }
     }
 
@@ -27,6 +54,11 @@
         img {
             width: 100%;
             height: auto;
+            @include breakpoint-up(xlarge) {
+                height: 100%;
+                object-fit: cover;
+
+            }
         }
     }
 }
