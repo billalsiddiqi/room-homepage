@@ -100,7 +100,9 @@ svg {
     display: block !important;
     animation: hasFade 0.3s ease-in-out;
 }
-
+.overflow-hidden {
+    overflow: hidden;
+}
 
 // Flexbox
 

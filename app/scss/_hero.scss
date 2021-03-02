@@ -27,7 +27,9 @@
     &-contents {
         position: relative;
         padding: 3.3125rem 2.0625rem;
-
+        @include breakpoint-up(medium){
+            padding: 3.3125rem 8.0625rem;
+        }
         .single-content-slide{
             display: none;
         }
@@ -53,6 +55,9 @@
                 display: flex;
                 z-index: 2;
                 background-color: $black;
+                @include breakpoint-up(medium){
+                    top: -67px;
+                }
                 .arrow {
                     padding: 1.1875rem 1.4375rem;
                 }

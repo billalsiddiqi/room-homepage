@@ -11,6 +11,9 @@
 
     &-text {
         padding: 3.3125rem 2.0625rem;
+        @include breakpoint-up(medium){
+            padding: 3.3125rem 8.0625rem;
+        }
 
         h3 {
             text-transform: uppercase;

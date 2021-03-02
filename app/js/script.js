@@ -1,3 +1,4 @@
+const body = document.getElementsByTagName('body')[0];
 // Menu
 const menu = document.querySelector('.moblie-menu-list');
 const humburger = document.querySelector('#humburger');
@@ -19,6 +20,7 @@ const left = document.querySelector('.arrow-left');
 const tl = new TimelineMax();
 
 humburger.addEventListener('click', () =>{
+    body.classList.add('overflow-hidden');
     if (tl.reversed()){
         tl.play();
     }else {
@@ -32,6 +34,7 @@ humburger.addEventListener('click', () =>{
 
 closeBtn.addEventListener('click', () =>{
     tl.reverse();
+    body.classList.remove('overflow-hidden');
 })
 
 

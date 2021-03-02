@@ -133,6 +133,10 @@ svg {
           animation: hasFade 0.3s ease-in-out;
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
+
 .flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -314,6 +318,12 @@ header .mobile-nav-container .moblie-menu-list ul li {
   padding: 3.3125rem 2.0625rem;
 }
 
+@media (min-width: 40em) {
+  .hero-contents {
+    padding: 3.3125rem 8.0625rem;
+  }
+}
+
 .hero-contents .single-content-slide {
   display: none;
 }
@@ -346,6 +356,12 @@ header .mobile-nav-container .moblie-menu-list ul li {
   background-color: black;
 }
 
+@media (min-width: 40em) {
+  .hero-contents .arrow-btns {
+    top: -67px;
+  }
+}
+
 .hero-contents .arrow-btns .arrow {
   padding: 1.1875rem 1.4375rem;
 }
@@ -361,6 +377,12 @@ header .mobile-nav-container .moblie-menu-list ul li {
 
 .about-text {
   padding: 3.3125rem 2.0625rem;
+}
+
+@media (min-width: 40em) {
+  .about-text {
+    padding: 3.3125rem 8.0625rem;
+  }
 }
 
 .about-text h3 {
