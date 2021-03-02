@@ -1,0 +1,87 @@
+header {
+    background-color: transparent;
+    z-index: 22;
+    position: relative;
+
+    .mobile-nav-container {
+        padding: 2.9375rem 1.5rem;
+        width: 100%;
+
+        @include breakpoint-up(medium){
+            padding: 2.9375rem 2.5rem;
+        }
+        .menu-logo {
+            #humburger {
+                @include breakpoint-up(large){
+                    display: none;
+                }
+            }
+            
+            img {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                @include breakpoint-up(large){
+                   left: 3.875rem;
+                   top: 3.125rem;
+                   transform: translateX(0);
+                }
+            }
+        }       
+        .moblie-menu-list {
+            position: absolute;
+            top: -100vh;
+            left: 0;
+            width: 100%;
+            padding: 2.9375rem 1.5rem;
+            background-color: $white;
+
+            @include breakpoint-up(medium){
+                padding: 2.9375rem 2.5rem;
+                font-size: 1rem;
+            }
+            @include breakpoint-up(large){
+                top: 0;
+                background: transparent;
+                justify-content: start;
+                padding: 3rem 11.4375rem;
+            }
+            li {
+                position: relative;
+                &:not(:last-child){
+                    margin-right: 1.5rem;
+                }
+                @include breakpoint-up(large){
+                    cursor: pointer;
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        bottom: -10px;
+                        height: 2px;
+                        width: 0%;
+                        background: $white;
+                        transition: all 0.3s;
+                    }
+                    &:hover::after {
+                        width: 50%;
+                    }
+                }
+            }
+            .close {
+                opacity: 0;
+                @include breakpoint-up(large){
+                    display: none;
+                }
+            }
+
+            ul li {
+                opacity: 0;
+                @include breakpoint-up(large) {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

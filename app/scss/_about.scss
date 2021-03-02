@@ -1,0 +1,29 @@
+.about {
+    &-dark {
+        width: 100%;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+
+    &-text {
+        padding: 3.3125rem 2.0625rem;
+
+        h3 {
+            text-transform: uppercase;
+            letter-spacing: 5px;
+        }
+    }
+
+    &-light {
+        width: 100%;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
