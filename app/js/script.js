@@ -1,4 +1,6 @@
 const body = document.getElementsByTagName('body')[0];
+const img = document.querySelector('.d-img');
+const arrow = document.querySelector('.arrow-shop');
 // Menu
 const menu = document.querySelector('.moblie-menu-list');
 const humburger = document.querySelector('#humburger');
@@ -38,9 +40,7 @@ closeBtn.addEventListener('click', () =>{
 })
 
 
-
 //Hero Slider
-
 
 let slidePosition = 0;
 
